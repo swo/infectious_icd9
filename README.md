@@ -1,6 +1,11 @@
 # Infectious disease ICD9-CM codes
 
-Codes from eTable 2 in Fleming-Dutra *et al*., *JAMA* (2016) doi:[10.1001/jama.2016.4151](http://dx.doi.org/10.1001/jama.2016.4151).
+Codes from eTable 2 in Fleming-Dutra *et al*., *JAMA* (2016)
+doi:[10.1001/jama.2016.4151](http://dx.doi.org/10.1001/jama.2016.4151).
+
+*Caveat*: The Table stipulates that visits should not be categorized as
+"Bronchitis, bronchiolitis" if "the 2nd or 3rd diagnosis was chronic bronchitis
+(491), emphysema (492), or COPD (496)."
 
 ## Files
 
