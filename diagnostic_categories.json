@@ -1,0 +1,144 @@
+[
+    {
+        "diagnosis": "Miscellaneous bacterial infections",
+        "short": "misc_bacterial",
+        "tier": 1,
+        "codes": ["010-018", "020-027", "030-033", "036-041", "070-104", "130-139", "320-323", "383-475"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Pneumonia",
+        "short": "pneumonia",
+        "tier": 1,
+        "codes": ["481", "481", "482", "483", "484", "485", "486"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Urinary tract infections",
+        "short": "uti",
+        "tier": 1,
+        "codes": ["590.1", "590.2", "590.8", "590.9", "595.0", "595.9", "599.0"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Acne",
+        "short": "acne",
+        "tier": 2,
+        "codes": ["706.0", "706.1"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Gastrointestinal infections",
+        "short": "gi",
+        "tier": 2,
+        "codes": ["001-009", "787", "789"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Phargyngitis",
+        "short": "pharyngitis",
+        "tier": 2,
+        "codes": ["462", "463", "034"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Sinusitis",
+        "short": "sinusitis",
+        "tier": 2,
+        "codes": ["461", "473"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Skin, cutaneous and mucosal infections",
+        "short": "ssti",
+        "tier": 2,
+        "codes": ["680-686", "035", "110-111", "704.8", "728.0", "611.0", "771.5", "732.86", "380.0-380.1"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Suppurative otitis media",
+        "short": "om",
+        "tier": 2,
+        "codes": ["382"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Asthma, allergy",
+        "short": "asthma",
+        "tier": 3,
+        "codes": ["493", "477", "995.3"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Bronchitis, bronchiolitis",
+        "short": "bronchitis",
+        "tier": 3,
+        "codes": ["490", "466"],
+        "excludes": [],
+        "excludes-note": "exclude if 2nd or 3rd diagnosis was 491, 492, or 496"
+    },
+    {
+        "diagnosis": "Influenza",
+        "short": "flu",
+        "tier": 3,
+        "codes": ["487", "488"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Miscellaneous other infections",
+        "short": "misc_t3",
+        "tier": 3,
+        "codes": ["042", "045-049", "050-059", "060-069", "112-129"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Non-suppurative otitis media",
+        "short": "om_t3",
+        "tier": 3,
+        "codes": ["381"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Other gastrointestinal conditions",
+        "short": "gi_t3",
+        "tier": 3,
+        "codes": ["520-579"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Other skin, cutaneous and mucosal conditions",
+        "short": "ssti_t3",
+        "tier": 3,
+        "codes": ["690-698", "700-709", "870-897", "910-919", "940-949", "360-379", "380-389", "782", "285.4", "785.6"],
+        "excludes": ["380.0-180.1", "381", "382", "383"]
+    },
+    {
+        "diagnosis": "Other genitourinary conditions",
+        "short": "uti_t3",
+        "tier": 3,
+        "codes": ["580-629", "788.1"],
+        "excludes": ["611.0"]
+    },
+    {
+        "diagnosis": "Viral pneumonia",
+        "short": "viral_flu",
+        "tier": 3,
+        "codes": ["480"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Viral upper respiratory infection",
+        "short": "uri",
+        "tier": 3,
+        "codes": ["460", "464", "465", "786.2"],
+        "excludes": []
+    },
+    {
+        "diagnosis": "Other respiratory conditions",
+        "short": "other_resp",
+        "tier": 3,
+        "codes": ["460-519", "786.0-786.1", "786.3-786.4"],
+        "excludes": [],
+        "excludes-note": "those listed above"
+    }
+]
