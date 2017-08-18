@@ -44,6 +44,7 @@ with open('diagnostic_categories.json') as f:
     dxcat = json.load(f)
 
 # loop over each diagnostic code
+print('code', 'reference', 'dx_cat', sep='\t')
 with open('../icd/icd.tsv') as f:
     header = next(f)
     for line in f:
@@ -54,4 +55,4 @@ with open('../icd/icd.tsv') as f:
             if matching_code(query_code, ref['excludes']) is None:
                 match = matching_code(query_code, ref['codes'])
                 if match is not None:
-                    print(query_code, match, ref['diagnosis'])
+                    print(query_code, match, ref['short'], sep='\t')
