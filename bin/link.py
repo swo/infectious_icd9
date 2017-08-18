@@ -45,7 +45,7 @@ with open('diagnostic_categories.json') as f:
 
 # loop over each diagnostic code
 print('code', 'reference', 'dx_cat', sep='\t')
-with open('../icd/icd.tsv') as f:
+with open('icd.tsv') as f:
     header = next(f)
     for line in f:
         query_code, desc = line.rstrip().split('\t')
