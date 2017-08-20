@@ -39,6 +39,16 @@ def matching_code(query, references):
 
     return None
 
+def matching_category(query_code, categories):
+    '''Find the first category that matches the query. If no matches, return None'''
+    for cat in categories:
+        if matching_code(query_code, cat['excludes']) is None:
+            match = matching_code(query_code, cat['codes'])
+            if match is not None:
+                out = dict(cat)
+                out['matched_reference'] = match
+                return out
+
 # read in the categories
 with open('diagnosis_categories.json') as f:
     dxcat = json.load(f)
@@ -51,15 +61,12 @@ with open('../fd_categories.tsv', 'w') as f:
 
 # loop over each diagnostic code
 with open('icd.tsv') as fin, open('../fd_codes.tsv', 'w') as fout:
-    print('code', 'reference', 'diagnostic_category', sep='\t', file=fout)
+    print('code', 'reference', 'diagnosis_category', sep='\t', file=fout)
 
     header = next(fin)
     for line in fin:
         query_code, desc = line.rstrip().split('\t')
 
-        # for each query code, compare against each diagnostic category
-        for ref in dxcat:
-            if matching_code(query_code, ref['excludes']) is None:
-                match = matching_code(query_code, ref['codes'])
-                if match is not None:
-                    print(query_code, match, ref['short'], sep='\t', file=fout)
+        cat = matching_category(query_code, dxcat)
+        if cat is not None:
+            print(query_code, cat['matched_reference'], cat['short'], sep='\t', file=fout)
