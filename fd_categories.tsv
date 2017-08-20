@@ -1,0 +1,21 @@
+diagnosis_category	diagnosis_category_desc	tier
+misc_bacterial	Miscellaneous bacterial infections	1
+pneumonia	Pneumonia	1
+uti	Urinary tract infections	1
+acne	Acne	2
+gi	Gastrointestinal infections	2
+pharyngitis	Phargyngitis	2
+sinusitis	Sinusitis	2
+ssti	Skin, cutaneous and mucosal infections	2
+om	Suppurative otitis media	2
+asthma	Asthma, allergy	3
+bronchitis	Bronchitis, bronchiolitis	3
+flu	Influenza	3
+misc_t3	Miscellaneous other infections	3
+om_t3	Non-suppurative otitis media	3
+gi_t3	Other gastrointestinal conditions	3
+ssti_t3	Other skin, cutaneous and mucosal conditions	3
+uti_t3	Other genitourinary conditions	3
+viral_flu	Viral pneumonia	3
+uri	Viral upper respiratory infection	3
+other_resp	Other respiratory conditions	3

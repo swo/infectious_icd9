@@ -40,14 +40,21 @@ def matching_code(query, references):
     return None
 
 # read in the categories
-with open('diagnostic_categories.json') as f:
+with open('diagnosis_categories.json') as f:
     dxcat = json.load(f)
 
+# first, output just the code names, tiers, etc.
+with open('../fd_categories.tsv', 'w') as f:
+    print('diagnosis_category', 'diagnosis_category_desc', 'tier', sep='\t', file=f)
+    for cat in dxcat:
+        print(cat['short'], cat['diagnosis'], cat['tier'], sep='\t', file=f)
+
 # loop over each diagnostic code
-print('code', 'reference', 'dx_cat', sep='\t')
-with open('icd.tsv') as f:
-    header = next(f)
-    for line in f:
+with open('icd.tsv') as fin, open('../fd_codes.tsv', 'w') as fout:
+    print('code', 'reference', 'diagnostic_category', sep='\t', file=fout)
+
+    header = next(fin)
+    for line in fin:
         query_code, desc = line.rstrip().split('\t')
 
         # for each query code, compare against each diagnostic category
@@ -55,4 +62,4 @@ with open('icd.tsv') as f:
             if matching_code(query_code, ref['excludes']) is None:
                 match = matching_code(query_code, ref['codes'])
                 if match is not None:
-                    print(query_code, match, ref['short'], sep='\t')
+                    print(query_code, match, ref['short'], sep='\t', file=fout)
