@@ -21,13 +21,13 @@ doi:[10.1001/jama.2016.4151](http://dx.doi.org/10.1001/jama.2016.4151).
 - *diagnosis_category_desc* is the long name for the category, as per the Table
 - *tier* is the "tier" of the diagnosis category, as per the Table
 
-`bin/diagnostic_categories.json` has the information from the Table, but in a
+`bin/diagnosis_categories.json` has the information from the Table, but in a
 machine-readable format.
 
 `bin/icd.tsv` is a list of all ICD9 codes.
 
-`bin/parse.py` is a little script to spit out the two data files.
+`bin/parse.py` is a script to that interprets the json and ICD files to make the
+two output files.
 
-`sas/` has a `sas7bdat` version of the main data file as well as two text
-files, one of which has the data in a csv format, and the other that has SAS
-commands for reading in that csv.
+`sas/` has four text files, two for each of the main data files. One is the data
+in a SAS-readable format; the other is the SAS code for reading in that data.
