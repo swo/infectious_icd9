@@ -15,6 +15,9 @@ doi:[10.1001/jama.2016.4151](http://dx.doi.org/10.1001/jama.2016.4151).
 - *reference* is the code or range given in the Table that justify the refers to this code
 - *diagnosis_category* is the abbreviation for the diagnosis category
 
+Codes that do not match one of the infectious categories have reference `NA`
+and diagnosis category `not_infectious`.
+
 `fd_categories.tsv` has one record per diagnosis category:
 
 - *diagnosis_category* is the same as in `fd_codes.tsv`

@@ -49,6 +49,8 @@ def matching_category(query_code, categories):
                 out['matched_reference'] = match
                 return out
 
+    return None
+
 # read in the categories
 with open('diagnosis_categories.json') as f:
     dxcat = json.load(f)
@@ -68,5 +70,8 @@ with open('icd.tsv') as fin, open('../fd_codes.tsv', 'w') as fout:
         query_code, desc = line.rstrip().split('\t')
 
         cat = matching_category(query_code, dxcat)
-        if cat is not None:
+
+        if cat is None:
+            print(query_code, 'NA', 'not_infectious', sep='\t', file=fout)
+        else:
             print(query_code, cat['matched_reference'], cat['short'], sep='\t', file=fout)
