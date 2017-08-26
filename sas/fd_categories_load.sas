@@ -1,5 +1,5 @@
 * Written by R;
-*  write.foreign(cats, "fd_categories_data.txt", "fd_categories_load.sas",  ;
+*  write.foreign(cats, "../fd_categories_data.txt", "../fd_categories_load.sas",  ;
 
 DATA  fd_categories ;
 LENGTH
@@ -7,7 +7,7 @@ LENGTH
  diagnosis_category_desc $ 44
 ;
 
-INFILE  "fd_categories_data.txt" 
+INFILE  "../fd_categories_data.txt" 
      DSD 
      LRECL= 62 ;
 INPUT
