@@ -4,16 +4,14 @@
 DATA  fd_codes ;
 LENGTH
  code $ 5
- reference $ NA
  diagnosis_category $ 14
 ;
 
 INFILE  "../fd_codes_data.txt" 
      DSD 
-     LRECL= 38 ;
+     LRECL= 28 ;
 INPUT
  code
- reference
  diagnosis_category $ 
 ;
 RUN;
