@@ -57,9 +57,9 @@ with open('diagnosis_categories.json') as f:
 
 # first, output just the code names, tiers, etc.
 with open('../fd_categories.tsv', 'w') as f:
-    print('diagnosis_category', 'diagnosis_category_desc', 'tier', sep='\t', file=f)
+    print('diagnosis_category', 'diagnosis_category_desc', 'tier', 't3_acute_respiratory', sep='\t', file=f)
     for cat in dxcat:
-        print(cat['short'], cat['diagnosis'], cat['tier'], sep='\t', file=f)
+        print(cat['short'], cat['diagnosis'], cat['tier'], cat['t3_acute_respiratory'], sep='\t', file=f)
 
 # loop over each diagnostic code
 with open('icd.tsv') as fin, open('../fd_codes.tsv', 'w') as fout:
