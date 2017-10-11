@@ -63,7 +63,7 @@ with open('../fd_categories.tsv', 'w') as f:
 
 # loop over each diagnostic code
 with open('icd.tsv') as fin, open('../fd_codes.tsv', 'w') as fout:
-    print('code', 'diagnosis_category', sep='\t', file=fout)
+    print('code', 'diagnosis_category', 't3_acute_respiratory', sep='\t', file=fout)
 
     header = next(fin)
     for line in fin:
@@ -72,6 +72,6 @@ with open('icd.tsv') as fin, open('../fd_codes.tsv', 'w') as fout:
         cat = matching_category(query_code, dxcat)
 
         if cat is None:
-            print(query_code, 'not_infectious', sep='\t', file=fout)
+            print(query_code, 'not_infectious', 'N', sep='\t', file=fout)
         else:
-            print(query_code, cat['short'], sep='\t', file=fout)
+            print(query_code, cat['short'], cat['t3_acute_respiratory'], sep='\t', file=fout)

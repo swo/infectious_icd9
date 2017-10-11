@@ -5,13 +5,15 @@ DATA  fd_codes ;
 LENGTH
  code $ 5
  diagnosis_category $ 14
+ t3_acute_respiratory $ 1
 ;
 
 INFILE  "../fd_codes_data.txt" 
      DSD 
-     LRECL= 28 ;
+     LRECL= 32 ;
 INPUT
  code
- diagnosis_category $ 
+ diagnosis_category
+ t3_acute_respiratory $ 
 ;
 RUN;
