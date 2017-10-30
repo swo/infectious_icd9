@@ -1,4 +1,4 @@
-diagnosis_category	diagnosis_category_desc	tier	t3_acute_respiratory
+dx_cat	desc	tier	t3_acute_respiratory
 misc_bacterial	Miscellaneous bacterial infections	1	N
 pneumonia	Pneumonia	1	N
 uti	Urinary tract infections	1	N
@@ -19,3 +19,4 @@ uti_t3	Other genitourinary conditions	3	N
 viral_flu	Viral pneumonia	3	Y
 uri	Viral upper respiratory infection	3	Y
 other_resp	Other respiratory conditions	3	N
+remaining_codes	Remaining codes not listed elsewhere	3	N

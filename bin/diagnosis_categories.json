@@ -160,5 +160,14 @@
         "codes": ["460-519", "786.0-786.1", "786.3-786.4"],
         "excludes": [],
         "excludes-note": "those listed above"
+    },
+    {
+        "diagnosis": "Remaining codes not listed elsewhere",
+        "short": "remaining_codes",
+        "tier": 3,
+        "t3_acute_respiratory": "N",
+        "codes": [],
+        "excludes": [],
+        "excludes-note": "any code listed above"
     }
 ]
